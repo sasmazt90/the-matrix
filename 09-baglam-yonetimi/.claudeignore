@@ -1,0 +1,27 @@
+# .CLAUDEIGNORE
+# Slayt 78 — Bağlam hijyeni: gereksiz dosyaları dışla
+
+# Bağımlılıklar — asla dahil etme
+node_modules/
+vendor/
+.venv/
+
+# Build çıktıları
+dist/
+build/
+.next/
+
+# Güvenlik — KESİNLİKLE dışla
+.env
+.env.local
+secrets/
+*.key
+
+# Büyük veri dosyaları
+*.csv
+*.json    # data/ klasöründeki
+logs/
+
+# Test fixtures
+__snapshots__/
+test/fixtures/
