@@ -1,0 +1,91 @@
+{
+  "$schema": "https://claude.ai/schemas/settings.json",
+  "_comment": "Hooks örneği — .claude/settings.json'a ekleyin (project-level)",
+
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./hook-ornekleri/secret-kontrol.sh",
+            "blocking": true,
+            "_comment": "Secret pattern tespit ederse edit'i blokla"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./scripts/log-command.sh",
+            "blocking": false,
+            "_comment": "Tüm bash komutlarını audit log'a yaz"
+          }
+        ]
+      }
+    ],
+
+    "PostToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./hook-ornekleri/otomatik-format.sh",
+            "_comment": "Edit sonrası prettier/biome çalıştır"
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./scripts/run-typecheck.sh",
+            "_comment": "TS dosyası değişmişse hızlı tsc çalıştır"
+          }
+        ]
+      }
+    ],
+
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./hook-ornekleri/durduginda-bildir.sh",
+            "_comment": "Ajan durduğunda Slack/email bildirim"
+          }
+        ]
+      }
+    ],
+
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./scripts/inject-context.sh",
+            "_comment": "User prompt'una otomatik context ekle (örn: git status)"
+          }
+        ]
+      }
+    ],
+
+    "Notification": [
+      {
+        "matcher": "permission_required",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Permission required\" with title \"Claude Code\"'",
+            "_comment": "Mac native notification (Linux: notify-send)"
+          }
+        ]
+      }
+    ]
+  }
+}
