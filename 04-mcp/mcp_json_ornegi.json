@@ -1,0 +1,7 @@
+{
+  "_comment": "Slayt 38 — Çok Ajanlı MCP Orkestrasyonu. Codex, Gemini ve Claude'u tek konuşmadan yönet.",
+  "mcpServers": {
+    "codex":  { "command": "codex-ncp" },
+    "gemini": { "command": "gemini-mcp" }
+  }
+}
