@@ -1,0 +1,14 @@
+{
+  "source": "synthetic",
+  "market": "Munich",
+  "campaign": "airport-rentals",
+  "period": "2026-10",
+  "currency": "EUR",
+  "lines": [
+    { "id": "retargeting", "planned": 800, "spent": 1040 },
+    { "id": "prospecting", "planned": 1200, "spent": 1160 }
+  ],
+  "finance": { "scope": "campaign", "contributionBeforeMedia": 3000 },
+  "evidence": { "scope": "campaign", "comparison": "ads on versus ads off" },
+  "request": { "line": "retargeting", "changePercent": -10 }
+}

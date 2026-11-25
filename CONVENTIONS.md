@@ -1,0 +1,5 @@
+# Data and handoff
+Owners maintain knowledge. Code writes evidence to .matrix/journal by a digest of the validated report. This gives identical observations the same name. A correction creates a new record. A draft carries the evidence ID. Runtime files stay local.
+Every handoff includes question, source path or ID, scope and period, fact versus hypothesis, remaining uncertainty, next action and owner. A KPI from an ad platform, an attributed campaign margin, an experimentally measured effect and a projected change have distinct meanings.
+A job status describes execution; a Journal entry describes a finding; MEMORY records a reviewed lesson. Save a checkpoint before ending a longer task. Record the last validated input, completed action and next owner. Record uncertainty rather than advancing from silence.
+Use JS for routine checks and reporting. Scheduled empty queues should finish before model invocation. Reinterpretation uses an existing evidence version; a refresh requests current source data. In a future live connector keep transient retries bounded, deduplicate on a stable action key and confirm the approved version before execution.
