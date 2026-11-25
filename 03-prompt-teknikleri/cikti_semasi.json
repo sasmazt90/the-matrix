@@ -1,0 +1,10 @@
+{
+  "_aciklama": "Slayt 26 — Çıktı Formatı Belirleme. JSON Schema ile zorunlu format.",
+  "dosya_sayisi": "number",
+  "toplam_satir": "number",
+  "diller": ["string"],
+  "karmasiklik": "dusuk | orta | yuksek",
+  "sorunlar": [
+    { "dosya": "str", "sorun": "str" }
+  ]
+}
