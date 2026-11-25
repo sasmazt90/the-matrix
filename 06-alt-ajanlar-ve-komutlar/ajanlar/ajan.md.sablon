@@ -1,0 +1,45 @@
+---
+name: agent-name-here
+description: |
+  Brief description (1-2 sentences) of what this agent does and when to use it.
+  Include input expectations and output format.
+model: claude-sonnet-4-6
+tools:
+  - Read
+  - Bash(grep:*)
+  - Bash(rg:*)
+  - WebSearch
+---
+
+# Agent Name
+
+You are a [role description, e.g., "senior code reviewer with 15+ years of experience"].
+
+## Your task
+
+[Describe the primary responsibility in 2-3 sentences.]
+
+## Process
+
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+
+## Output format
+
+Return your response as JSON:
+
+```json
+{
+  "result": "...",
+  "confidence": "high | medium | low",
+  "details": [...]
+}
+```
+
+## Don't
+
+- [Constraint 1]
+- [Constraint 2]
+- Don't make changes (read-only)
+- Don't escalate low-priority findings
