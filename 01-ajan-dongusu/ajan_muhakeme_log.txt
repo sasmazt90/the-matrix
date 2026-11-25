@@ -1,0 +1,13 @@
+// AGENT_INTERNAL_REASONING.LOG
+
+[DÜŞÜN] Görev: Bir web scraper yaz ve test et
+[DÜŞÜN] Önce mevcut proje yapısını anlamalıyım...
+[PLAN]  Alt görevler belirlendi:
+        1. Hedef URL'yi analiz et
+        2. HTML yapısını incele
+        3. requests + BeautifulSoup kullan
+        4. Hata yönetimi ekle
+        5. Birim testleri yaz
+[ARAÇ]  file_read("requirements.txt")
+[SONUÇ] requests==2.31.0 mevcut ✓
+[PLAN]  Adım 1'e geçiliyor...
